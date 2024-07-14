@@ -26,8 +26,12 @@ class ListingPresenter {
         interactor.fetchUniversities()
     }
     
+    func refreshData() {
+        interactor.fetchUniversities()
+    }
+    
     func didSelectUniversity(_ university: University) {
-        router.navigateToDetails(with: university)
+        router.navigateToDetails(with: university, listingPresenter: self)
     }
 }
 

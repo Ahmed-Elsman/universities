@@ -157,6 +157,7 @@ class DetailsViewController: UIViewController, DetailsView {
     // MARK: - Actions
     
     @objc private func refreshButtonTapped() {
+        presenter?.refreshListingData()
     }
     
     // MARK: - DetailsView
