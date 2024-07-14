@@ -23,7 +23,6 @@
 		276F69D02C43DD3500BF6943 /* DetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F69CF2C43DD3500BF6943 /* DetailsInteractor.swift */; };
 		276F69D32C43DD4800BF6943 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F69D22C43DD4800BF6943 /* DetailsPresenter.swift */; };
 		276F69D62C43DD6000BF6943 /* DetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F69D52C43DD6000BF6943 /* DetailsRouter.swift */; };
-		276F69D92C43F36100BF6943 /* SwiftLintFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 276F69D82C43F36100BF6943 /* SwiftLintFramework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,7 +63,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				276F69D92C43F36100BF6943 /* SwiftLintFramework in Frameworks */,
 				276F69C52C43D1DA00BF6943 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,7 +231,6 @@
 			name = universities;
 			packageProductDependencies = (
 				276F69C42C43D1DA00BF6943 /* RealmSwift */,
-				276F69D82C43F36100BF6943 /* SwiftLintFramework */,
 			);
 			productName = universities;
 			productReference = 276F69932C43B6A500BF6943 /* universities.app */;
@@ -265,7 +262,6 @@
 			mainGroup = 276F698A2C43B6A500BF6943;
 			packageReferences = (
 				276F69BB2C43CEDE00BF6943 /* XCRemoteSwiftPackageReference "realm-swift" */,
-				276F69D72C43F36100BF6943 /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			productRefGroup = 276F69942C43B6A500BF6943 /* Products */;
 			projectDirPath = "";
@@ -374,7 +370,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -431,7 +427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -452,11 +448,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = universities/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -485,11 +481,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = universities/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -539,14 +535,6 @@
 				kind = branch;
 			};
 		};
-		276F69D72C43F36100BF6943 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/SwiftLint";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.55.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -554,11 +542,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 276F69BB2C43CEDE00BF6943 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
-		};
-		276F69D82C43F36100BF6943 /* SwiftLintFramework */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 276F69D72C43F36100BF6943 /* XCRemoteSwiftPackageReference "SwiftLint" */;
-			productName = SwiftLintFramework;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
