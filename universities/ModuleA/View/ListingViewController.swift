@@ -22,7 +22,7 @@ class ListingViewController: UIViewController, ListingView {
         tableView.frame = view.bounds
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(UniversityCell.self, forCellReuseIdentifier: UniversityCell.identifier)
         view.addSubview(tableView)
     }
     
@@ -44,8 +44,10 @@ extension ListingViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = universities[indexPath.row].name
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: UniversityCell.identifier, for: indexPath) as? UniversityCell else {
+            return UITableViewCell()
+        }
+        cell.configure(with: universities[indexPath.row])
         return cell
     }
     
@@ -53,4 +55,3 @@ extension ListingViewController: UITableViewDataSource, UITableViewDelegate {
         presenter?.didSelectUniversity(universities[indexPath.row])
     }
 }
-
