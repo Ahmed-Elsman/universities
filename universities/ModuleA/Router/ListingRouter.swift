@@ -11,7 +11,8 @@ class ListingRouter {
     weak var viewController: UIViewController?
     
     func navigateToDetails(with university: University) {
-        // navigate here to details view
+        let detailsVC = DetailsRouter.createModule(with: university)
+        viewController?.navigationController?.pushViewController(detailsVC, animated: true)
     }
     
     static func createModule() -> UIViewController {
@@ -28,4 +29,3 @@ class ListingRouter {
         return view
     }
 }
-

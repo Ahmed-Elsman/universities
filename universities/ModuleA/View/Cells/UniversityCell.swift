@@ -87,7 +87,7 @@ class UniversityCell: UITableViewCell {
     
     func configure(with university: University) {
         nameLabel.text = university.name
-        stateLabel.text = university.alphaTwoCode
+        stateLabel.text = university.country
     }
 }
 

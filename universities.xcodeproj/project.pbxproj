@@ -19,6 +19,10 @@
 		276F69C52C43D1DA00BF6943 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 276F69C42C43D1DA00BF6943 /* RealmSwift */; };
 		276F69C62C43D1DA00BF6943 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 276F69C42C43D1DA00BF6943 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		276F69C92C43D63800BF6943 /* UniversityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F69C82C43D63800BF6943 /* UniversityCell.swift */; };
+		276F69CD2C43DD1900BF6943 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F69CC2C43DD1900BF6943 /* DetailsViewController.swift */; };
+		276F69D02C43DD3500BF6943 /* DetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F69CF2C43DD3500BF6943 /* DetailsInteractor.swift */; };
+		276F69D32C43DD4800BF6943 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F69D22C43DD4800BF6943 /* DetailsPresenter.swift */; };
+		276F69D62C43DD6000BF6943 /* DetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F69D52C43DD6000BF6943 /* DetailsRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +52,10 @@
 		276F69B52C43BDB100BF6943 /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
 		276F69B82C43BDC200BF6943 /* ListingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingRouter.swift; sourceTree = "<group>"; };
 		276F69C82C43D63800BF6943 /* UniversityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityCell.swift; sourceTree = "<group>"; };
+		276F69CC2C43DD1900BF6943 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		276F69CF2C43DD3500BF6943 /* DetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInteractor.swift; sourceTree = "<group>"; };
+		276F69D22C43DD4800BF6943 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
+		276F69D52C43DD6000BF6943 /* DetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +92,7 @@
 			children = (
 				276F69962C43B6A500BF6943 /* AppDelegate.swift */,
 				276F69982C43B6A500BF6943 /* SceneDelegate.swift */,
+				276F69CA2C43DCDA00BF6943 /* ModuleB */,
 				276F69AA2C43BD4000BF6943 /* ModuleA */,
 				276F699F2C43B6A900BF6943 /* Assets.xcassets */,
 				276F69A12C43B6A900BF6943 /* LaunchScreen.storyboard */,
@@ -158,6 +167,49 @@
 				276F69C82C43D63800BF6943 /* UniversityCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		276F69CA2C43DCDA00BF6943 /* ModuleB */ = {
+			isa = PBXGroup;
+			children = (
+				276F69D42C43DD5400BF6943 /* Router */,
+				276F69D12C43DD3D00BF6943 /* Presenter */,
+				276F69CE2C43DD2300BF6943 /* Interactor */,
+				276F69CB2C43DD0D00BF6943 /* View */,
+			);
+			path = ModuleB;
+			sourceTree = "<group>";
+		};
+		276F69CB2C43DD0D00BF6943 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				276F69CC2C43DD1900BF6943 /* DetailsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		276F69CE2C43DD2300BF6943 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				276F69CF2C43DD3500BF6943 /* DetailsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		276F69D12C43DD3D00BF6943 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				276F69D22C43DD4800BF6943 /* DetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		276F69D42C43DD5400BF6943 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				276F69D52C43DD6000BF6943 /* DetailsRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,9 +290,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				276F69B92C43BDC200BF6943 /* ListingRouter.swift in Sources */,
+				276F69D62C43DD6000BF6943 /* DetailsRouter.swift in Sources */,
 				276F69972C43B6A500BF6943 /* AppDelegate.swift in Sources */,
+				276F69CD2C43DD1900BF6943 /* DetailsViewController.swift in Sources */,
 				276F69C92C43D63800BF6943 /* UniversityCell.swift in Sources */,
 				276F69992C43B6A500BF6943 /* SceneDelegate.swift in Sources */,
+				276F69D32C43DD4800BF6943 /* DetailsPresenter.swift in Sources */,
+				276F69D02C43DD3500BF6943 /* DetailsInteractor.swift in Sources */,
 				276F69B02C43BD7D00BF6943 /* ListingInteractor.swift in Sources */,
 				276F69AD2C43BD6400BF6943 /* ListingViewController.swift in Sources */,
 				276F69B32C43BD9A00BF6943 /* ListingPresenter.swift in Sources */,
