@@ -11,13 +11,13 @@ class ListingViewController: UIViewController, ListingView {
     var presenter: ListingPresenter?
     private var universities: [University] = []
     private let tableView = UITableView()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         presenter?.viewDidLoad()
     }
-    
+
     private func setupTableView() {
         tableView.frame = view.bounds
         tableView.dataSource = self
@@ -25,14 +25,14 @@ class ListingViewController: UIViewController, ListingView {
         tableView.register(UniversityCell.self, forCellReuseIdentifier: UniversityCell.identifier)
         view.addSubview(tableView)
     }
-    
+
     func showUniversities(_ universities: [University]) {
         self.universities = universities
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
     }
-    
+
     func showError(_ error: String) {
         // Handle error display
     }
@@ -42,7 +42,7 @@ extension ListingViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return universities.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: UniversityCell.identifier, for: indexPath) as? UniversityCell else {
             return UITableViewCell()
@@ -50,7 +50,7 @@ extension ListingViewController: UITableViewDataSource, UITableViewDelegate {
         cell.configure(with: universities[indexPath.row])
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter?.didSelectUniversity(universities[indexPath.row])
     }

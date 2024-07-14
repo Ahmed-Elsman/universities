@@ -20,15 +20,15 @@ protocol ListingInteractorOutput: AnyObject {
 class ListingInteractor: ListingInteractorInput {
     weak var output: ListingInteractorOutput?
     private let apiUrl = "http://universities.hipolabs.com/search?country=United%20Arab%20Emirates"
-    
+
     func fetchUniversities() {
         if let url = URL(string: apiUrl) {
-            let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            let task = URLSession.shared.dataTask(with: url) { data, _, error in
                 if let error = error {
                     self.fetchFromLocalDB(with: error)
                     return
                 }
-                
+
                 if let data = data {
                     do {
                         let universities = try JSONDecoder().decode([University].self, from: data)
@@ -44,7 +44,7 @@ class ListingInteractor: ListingInteractorInput {
             task.resume()
         }
     }
-    
+
     private func saveToLocalDB(_ universities: [University]) {
         DispatchQueue.main.async {
             let realm = try! Realm()
@@ -54,7 +54,7 @@ class ListingInteractor: ListingInteractorInput {
             }
         }
     }
-    
+
     private func fetchFromLocalDB(with error: Error) {
         DispatchQueue.main.async {
             let realm = try! Realm()

@@ -16,20 +16,20 @@ class ListingPresenter {
     private let interactor: ListingInteractorInput
     private let router: ListingRouter
     weak var view: ListingView?
-    
+
     init(interactor: ListingInteractorInput, router: ListingRouter) {
         self.interactor = interactor
         self.router = router
     }
-    
+
     func viewDidLoad() {
         interactor.fetchUniversities()
     }
-    
+
     func refreshData() {
         interactor.fetchUniversities()
     }
-    
+
     func didSelectUniversity(_ university: University) {
         router.navigateToDetails(with: university, listingPresenter: self)
     }
@@ -39,9 +39,8 @@ extension ListingPresenter: ListingInteractorOutput {
     func didFetchUniversities(_ universities: [University]) {
         view?.showUniversities(universities)
     }
-    
+
     func didFailToFetchUniversities(with error: Error) {
         view?.showError(error.localizedDescription)
     }
 }
-

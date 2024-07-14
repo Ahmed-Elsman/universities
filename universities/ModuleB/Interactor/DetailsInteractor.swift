@@ -14,4 +14,3 @@ protocol DetailsInteractorInput {
 class DetailsInteractor: DetailsInteractorInput {
     // Refresh method Implement will be added
 }
-
