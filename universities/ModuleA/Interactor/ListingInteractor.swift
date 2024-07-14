@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 protocol ListingInteractorInput {
     func fetchUniversities()
@@ -24,18 +25,45 @@ class ListingInteractor: ListingInteractorInput {
         if let url = URL(string: apiUrl) {
             let task = URLSession.shared.dataTask(with: url) { data, response, error in
                 if let error = error {
+                    self.fetchFromLocalDB(with: error)
                     return
                 }
                 
                 if let data = data {
                     do {
                         let universities = try JSONDecoder().decode([University].self, from: data)
-                        self.output?.didFetchUniversities(universities)
+                        self.saveToLocalDB(universities)
+                        DispatchQueue.main.async {
+                            self.output?.didFetchUniversities(universities)
+                        }
                     } catch {
+                        self.fetchFromLocalDB(with: error)
                     }
                 }
             }
             task.resume()
+        }
+    }
+    
+    private func saveToLocalDB(_ universities: [University]) {
+        DispatchQueue.main.async {
+            let realm = try! Realm()
+            try! realm.write {
+                realm.delete(realm.objects(University.self))
+                realm.add(universities)
+            }
+        }
+    }
+    
+    private func fetchFromLocalDB(with error: Error) {
+        DispatchQueue.main.async {
+            let realm = try! Realm()
+            let universities = realm.objects(University.self).map { $0 }
+            if universities.isEmpty {
+                self.output?.didFailToFetchUniversities(with: error)
+            } else {
+                self.output?.didFetchUniversities(Array(universities))
+            }
         }
     }
 }
