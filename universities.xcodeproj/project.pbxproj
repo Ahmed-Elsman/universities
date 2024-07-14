@@ -93,11 +93,9 @@
 			children = (
 				276F69962C43B6A500BF6943 /* AppDelegate.swift */,
 				276F69982C43B6A500BF6943 /* SceneDelegate.swift */,
-				276F69CA2C43DCDA00BF6943 /* ModuleB */,
 				276F69AA2C43BD4000BF6943 /* ModuleA */,
-				276F699F2C43B6A900BF6943 /* Assets.xcassets */,
-				276F69A12C43B6A900BF6943 /* LaunchScreen.storyboard */,
-				276F69A42C43B6A900BF6943 /* Info.plist */,
+				276F69CA2C43DCDA00BF6943 /* ModuleB */,
+				2782F5312C43FE700090AA75 /* Resources */,
 			);
 			path = universities;
 			sourceTree = "<group>";
@@ -211,6 +209,16 @@
 				276F69D52C43DD6000BF6943 /* DetailsRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		2782F5312C43FE700090AA75 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				276F699F2C43B6A900BF6943 /* Assets.xcassets */,
+				276F69A12C43B6A900BF6943 /* LaunchScreen.storyboard */,
+				276F69A42C43B6A900BF6943 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
