@@ -12,15 +12,13 @@ protocol DetailsView: AnyObject {
 }
 
 class DetailsPresenter {
-    private let interactor: DetailsInteractorInput
     private let router: DetailsRouter
     private let listingPresenter: ListingPresenter
     weak var view: DetailsView?
 
     private let university: University
 
-    init(interactor: DetailsInteractorInput, router: DetailsRouter, listingPresenter: ListingPresenter, university: University) {
-        self.interactor = interactor
+    init(router: DetailsRouter, listingPresenter: ListingPresenter, university: University) {
         self.router = router
         self.listingPresenter = listingPresenter
         self.university = university
