@@ -55,26 +55,26 @@ class UniversityCell: UITableViewCell {
         containerView.addSubview(arrowImageView)
 
         NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
-            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
-            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
-            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
+            containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: UIConstants.containerViewVerticalPadding),
+            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -UIConstants.containerViewVerticalPadding),
+            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: UIConstants.containerViewPadding),
+            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -UIConstants.containerViewPadding),
 
-            nameLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 10),
-            nameLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 15),
-            nameLabel.trailingAnchor.constraint(lessThanOrEqualTo: arrowImageView.leadingAnchor, constant: -10),
+            nameLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: UIConstants.containerViewVerticalPadding),
+            nameLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: UIConstants.nameLabelLeadingPadding),
+            nameLabel.trailingAnchor.constraint(lessThanOrEqualTo: arrowImageView.leadingAnchor, constant: -UIConstants.arrowImageViewPadding),
 
-            stateLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 5),
-            stateLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 15),
-            stateLabel.trailingAnchor.constraint(lessThanOrEqualTo: arrowImageView.leadingAnchor, constant: -10),
-            stateLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -10),
+            stateLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: UIConstants.containerViewVerticalPadding),
+            stateLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: UIConstants.nameLabelLeadingPadding),
+            stateLabel.trailingAnchor.constraint(lessThanOrEqualTo: arrowImageView.leadingAnchor, constant: -UIConstants.arrowImageViewPadding),
+            stateLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -UIConstants.containerViewVerticalPadding),
 
             arrowImageView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
-            arrowImageView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -15),
-            arrowImageView.leadingAnchor.constraint(greaterThanOrEqualTo: nameLabel.trailingAnchor, constant: 10),
+            arrowImageView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -UIConstants.arrowImageViewPadding),
+            arrowImageView.leadingAnchor.constraint(greaterThanOrEqualTo: nameLabel.trailingAnchor, constant: UIConstants.arrowImageViewPadding),
 
-            arrowImageView.widthAnchor.constraint(equalToConstant: 25),
-            arrowImageView.heightAnchor.constraint(equalToConstant: 25)
+            arrowImageView.widthAnchor.constraint(equalToConstant: UIConstants.arrowImageViewWidth),
+            arrowImageView.heightAnchor.constraint(equalToConstant: UIConstants.arrowImageViewHeight)
         ])
 
         nameLabel.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
