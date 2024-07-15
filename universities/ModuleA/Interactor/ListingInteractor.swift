@@ -19,32 +19,29 @@ protocol ListingInteractorOutput: AnyObject {
 
 class ListingInteractor: ListingInteractorInput {
     weak var output: ListingInteractorOutput?
-    private let apiUrl = "http://universities.hipolabs.com/search?country=United%20Arab%20Emirates"
-
+    private let networkManager: NetworkManaging
+    private let universityEndpoint = UniversityEndpoint()
+    
+    init(networkManager: NetworkManaging) {
+        self.networkManager = networkManager
+    }
+    
     func fetchUniversities() {
-        if let url = URL(string: apiUrl) {
-            let task = URLSession.shared.dataTask(with: url) { data, _, error in
-                if let error = error {
-                    self.fetchFromLocalDB(with: error)
-                    return
+        networkManager.fetchData(from: universityEndpoint) { [weak self] (result: Result<[University], Error>) in
+            switch result {
+            case .success(let universities):
+                if self?.universityEndpoint.shouldSaveToDatabase == true {
+                    self?.saveToLocalDB(universities)
                 }
-
-                if let data = data {
-                    do {
-                        let universities = try JSONDecoder().decode([University].self, from: data)
-                        self.saveToLocalDB(universities)
-                        DispatchQueue.main.async {
-                            self.output?.didFetchUniversities(universities)
-                        }
-                    } catch {
-                        self.fetchFromLocalDB(with: error)
-                    }
+                DispatchQueue.main.async {
+                    self?.output?.didFetchUniversities(universities)
                 }
+            case .failure(let error):
+                self?.fetchFromLocalDB(with: error)
             }
-            task.resume()
         }
     }
-
+    
     private func saveToLocalDB(_ universities: [University]) {
         DispatchQueue.main.async {
             let realm = try! Realm()
@@ -54,7 +51,7 @@ class ListingInteractor: ListingInteractorInput {
             }
         }
     }
-
+    
     private func fetchFromLocalDB(with error: Error) {
         DispatchQueue.main.async {
             let realm = try! Realm()
