@@ -1,0 +1,46 @@
+//
+//  APIEndpoint.swift
+//  challenge05
+//
+//  Created by Ahmed Elsman on 02/07/2024.
+//
+
+import Foundation
+
+enum RequestType: String {
+    case get = "GET"
+    case post = "POST"
+    case put = "PUT"
+    case delete = "DELETE"
+}
+
+enum AcceptType: String {
+    case json = "application/json"
+}
+
+protocol APIEndpoint {
+    var path: String { get }
+    var queryItems: [URLQueryItem] { get }
+    var requestType: RequestType { get }
+    var acceptType: AcceptType { get }
+    var shouldSaveToDatabase: Bool { get }
+}
+
+extension APIEndpoint {
+    var baseURL: URL {
+        return ConfigurationManager.shared.baseURL
+    }
+    
+    var urlComponents: URLComponents {
+        var components = URLComponents(url: baseURL.appendingPathComponent(path), resolvingAgainstBaseURL: true)!
+        components.queryItems = queryItems
+        return components
+    }
+    
+    var request: URLRequest {
+        var request = URLRequest(url: urlComponents.url!)
+        request.httpMethod = requestType.rawValue
+        request.setValue(acceptType.rawValue, forHTTPHeaderField: "Accept")
+        return request
+    }
+}
