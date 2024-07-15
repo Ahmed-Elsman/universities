@@ -13,6 +13,7 @@
 		276F69992C43B6A500BF6943 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F69982C43B6A500BF6943 /* SceneDelegate.swift */; };
 		276F69A02C43B6A900BF6943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276F699F2C43B6A900BF6943 /* Assets.xcassets */; };
 		276F69A32C43B6A900BF6943 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 276F69A22C43B6A900BF6943 /* Base */; };
+		2772FE882C45A3AE00D00EA0 /* DetailsScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 2772FE872C45A3AE00D00EA0 /* DetailsScreen */; };
 		2782F5302C43FB3B0090AA75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276F69A12C43B6A900BF6943 /* LaunchScreen.storyboard */; };
 		279402D12C459A18009F4114 /* DetailsScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 279402D02C459A18009F4114 /* DetailsScreen */; };
 		27AE38F52C454D1600024EEB /* ListingScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 27AE38F42C454D1600024EEB /* ListingScreen */; };
@@ -63,6 +64,7 @@
 				271890A52C4534F2004BBC89 /* ListingScreen in Frameworks */,
 				279402D12C459A18009F4114 /* DetailsScreen in Frameworks */,
 				27AE39012C455C8400024EEB /* ListingScreen in Frameworks */,
+				2772FE882C45A3AE00D00EA0 /* DetailsScreen in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +144,7 @@
 				27AE39032C455CBD00024EEB /* ListingScreen */,
 				332C6ABD2C455DCD00BF052C /* ListingScreen */,
 				279402D02C459A18009F4114 /* DetailsScreen */,
+				2772FE872C45A3AE00D00EA0 /* DetailsScreen */,
 			);
 			productName = universities;
 			productReference = 276F69932C43B6A500BF6943 /* universities.app */;
@@ -173,7 +176,7 @@
 			mainGroup = 276F698A2C43B6A500BF6943;
 			packageReferences = (
 				332C6ABC2C455DCD00BF052C /* XCLocalSwiftPackageReference "Packages/ListingScreen" */,
-				279402CF2C459A18009F4114 /* XCLocalSwiftPackageReference "Packages/DetailsScreen" */,
+				2772FE862C45A3AE00D00EA0 /* XCLocalSwiftPackageReference "Packages/DetailsScreen" */,
 			);
 			productRefGroup = 276F69942C43B6A500BF6943 /* Products */;
 			projectDirPath = "";
@@ -430,7 +433,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		279402CF2C459A18009F4114 /* XCLocalSwiftPackageReference "Packages/DetailsScreen" */ = {
+		2772FE862C45A3AE00D00EA0 /* XCLocalSwiftPackageReference "Packages/DetailsScreen" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Packages/DetailsScreen;
 		};
@@ -448,6 +451,10 @@
 		271890A42C4534F2004BBC89 /* ListingScreen */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ListingScreen;
+		};
+		2772FE872C45A3AE00D00EA0 /* DetailsScreen */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DetailsScreen;
 		};
 		279402D02C459A18009F4114 /* DetailsScreen */ = {
 			isa = XCSwiftPackageProductDependency;
