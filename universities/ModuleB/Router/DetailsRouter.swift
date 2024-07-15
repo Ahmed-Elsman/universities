@@ -6,22 +6,28 @@
 //
 
 import UIKit
+import DAL
+import Common
+
 
 class DetailsRouter {
     weak var viewController: UIViewController?
+    var navigationCompletionHandler: NavigationCompletionHandler?
 
     func navigateBack() {
+        navigationCompletionHandler?(.list)
         viewController?.navigationController?.popViewController(animated: true)
     }
-
-    static func createModule(with university: University, listingPresenter: ListingPresenter) -> UIViewController {
+    
+    static func createModule(with university: University, navigationCompletionHandler: @escaping NavigationCompletionHandler) -> UIViewController {
         let view = DetailsViewController()
         let router = DetailsRouter()
-        let presenter = DetailsPresenter(router: router, listingPresenter: listingPresenter, university: university)
+        let presenter = DetailsPresenter(router: router, university: university)
 
         view.presenter = presenter
         presenter.view = view
         router.viewController = view
+        router.navigationCompletionHandler = navigationCompletionHandler
 
         return view
     }

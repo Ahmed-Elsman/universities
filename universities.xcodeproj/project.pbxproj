@@ -3,35 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27136E3D2C453427007C390E /* ListingScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 27136E3C2C453427007C390E /* ListingScreen */; };
+		271890A52C4534F2004BBC89 /* ListingScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 271890A42C4534F2004BBC89 /* ListingScreen */; };
 		276F69972C43B6A500BF6943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F69962C43B6A500BF6943 /* AppDelegate.swift */; };
 		276F69992C43B6A500BF6943 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F69982C43B6A500BF6943 /* SceneDelegate.swift */; };
 		276F69A02C43B6A900BF6943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276F699F2C43B6A900BF6943 /* Assets.xcassets */; };
 		276F69A32C43B6A900BF6943 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 276F69A22C43B6A900BF6943 /* Base */; };
-		276F69AD2C43BD6400BF6943 /* ListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F69AC2C43BD6400BF6943 /* ListingViewController.swift */; };
-		276F69B02C43BD7D00BF6943 /* ListingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F69AF2C43BD7D00BF6943 /* ListingInteractor.swift */; };
-		276F69B32C43BD9A00BF6943 /* ListingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F69B22C43BD9A00BF6943 /* ListingPresenter.swift */; };
-		276F69B62C43BDB100BF6943 /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F69B52C43BDB100BF6943 /* University.swift */; };
-		276F69B92C43BDC200BF6943 /* ListingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F69B82C43BDC200BF6943 /* ListingRouter.swift */; };
-		276F69C52C43D1DA00BF6943 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 276F69C42C43D1DA00BF6943 /* RealmSwift */; };
-		276F69C62C43D1DA00BF6943 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 276F69C42C43D1DA00BF6943 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		276F69C92C43D63800BF6943 /* UniversityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F69C82C43D63800BF6943 /* UniversityCell.swift */; };
 		276F69CD2C43DD1900BF6943 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F69CC2C43DD1900BF6943 /* DetailsViewController.swift */; };
 		276F69D32C43DD4800BF6943 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F69D22C43DD4800BF6943 /* DetailsPresenter.swift */; };
 		276F69D62C43DD6000BF6943 /* DetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F69D52C43DD6000BF6943 /* DetailsRouter.swift */; };
 		2782F5302C43FB3B0090AA75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276F69A12C43B6A900BF6943 /* LaunchScreen.storyboard */; };
-		2782F53D2C45009B0090AA75 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782F5352C45009B0090AA75 /* APIEndpoint.swift */; };
-		2782F53F2C45009B0090AA75 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782F5372C45009B0090AA75 /* ConfigurationManager.swift */; };
-		2782F5432C4501FC0090AA75 /* UniversityEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782F5422C4501FC0090AA75 /* UniversityEndpoint.swift */; };
-		2782F5452C4502AD0090AA75 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782F5442C4502AD0090AA75 /* Network.swift */; };
-		2782F5472C4502D60090AA75 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782F5462C4502D60090AA75 /* APIError.swift */; };
-		2782F54C2C4511BB0090AA75 /* PresenterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782F54B2C4511BB0090AA75 /* PresenterState.swift */; };
-		2782F54E2C45170C0090AA75 /* ProgressViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782F54D2C45170C0090AA75 /* ProgressViewManager.swift */; };
-		27FA4F802C45260D0067A7B6 /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA4F7F2C45260D0067A7B6 /* UIConstants.swift */; };
-		27FA4F822C4527B40067A7B6 /* UniversityRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA4F812C4527B40067A7B6 /* UniversityRepository.swift */; };
+		27AE38F52C454D1600024EEB /* ListingScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 27AE38F42C454D1600024EEB /* ListingScreen */; };
+		27AE38F82C454E2700024EEB /* ListingScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 27AE38F72C454E2700024EEB /* ListingScreen */; };
+		27AE38FB2C45508F00024EEB /* ListingScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 27AE38FA2C45508F00024EEB /* ListingScreen */; };
+		27AE38FE2C455C3300024EEB /* ListingScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 27AE38FD2C455C3300024EEB /* ListingScreen */; };
+		27AE39012C455C8400024EEB /* ListingScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 27AE39002C455C8400024EEB /* ListingScreen */; };
+		27AE39042C455CBD00024EEB /* ListingScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 27AE39032C455CBD00024EEB /* ListingScreen */; };
+		27FA4F852C4533340067A7B6 /* ListingScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 27FA4F842C4533340067A7B6 /* ListingScreen */; };
+		332C6ABE2C455DCD00BF052C /* ListingScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 332C6ABD2C455DCD00BF052C /* ListingScreen */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,7 +34,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				276F69C62C43D1DA00BF6943 /* RealmSwift in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,24 +47,9 @@
 		276F699F2C43B6A900BF6943 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		276F69A22C43B6A900BF6943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		276F69A42C43B6A900BF6943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		276F69AC2C43BD6400BF6943 /* ListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewController.swift; sourceTree = "<group>"; };
-		276F69AF2C43BD7D00BF6943 /* ListingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingInteractor.swift; sourceTree = "<group>"; };
-		276F69B22C43BD9A00BF6943 /* ListingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingPresenter.swift; sourceTree = "<group>"; };
-		276F69B52C43BDB100BF6943 /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
-		276F69B82C43BDC200BF6943 /* ListingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingRouter.swift; sourceTree = "<group>"; };
-		276F69C82C43D63800BF6943 /* UniversityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityCell.swift; sourceTree = "<group>"; };
 		276F69CC2C43DD1900BF6943 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		276F69D22C43DD4800BF6943 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
 		276F69D52C43DD6000BF6943 /* DetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouter.swift; sourceTree = "<group>"; };
-		2782F5352C45009B0090AA75 /* APIEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
-		2782F5372C45009B0090AA75 /* ConfigurationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
-		2782F5422C4501FC0090AA75 /* UniversityEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversityEndpoint.swift; sourceTree = "<group>"; };
-		2782F5442C4502AD0090AA75 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		2782F5462C4502D60090AA75 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		2782F54B2C4511BB0090AA75 /* PresenterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterState.swift; sourceTree = "<group>"; };
-		2782F54D2C45170C0090AA75 /* ProgressViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewManager.swift; sourceTree = "<group>"; };
-		27FA4F7F2C45260D0067A7B6 /* UIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
-		27FA4F812C4527B40067A7B6 /* UniversityRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +57,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				276F69C52C43D1DA00BF6943 /* RealmSwift in Frameworks */,
+				27136E3D2C453427007C390E /* ListingScreen in Frameworks */,
+				27AE38FB2C45508F00024EEB /* ListingScreen in Frameworks */,
+				27AE38F52C454D1600024EEB /* ListingScreen in Frameworks */,
+				27AE38FE2C455C3300024EEB /* ListingScreen in Frameworks */,
+				27AE39042C455CBD00024EEB /* ListingScreen in Frameworks */,
+				27AE38F82C454E2700024EEB /* ListingScreen in Frameworks */,
+				27FA4F852C4533340067A7B6 /* ListingScreen in Frameworks */,
+				332C6ABE2C455DCD00BF052C /* ListingScreen in Frameworks */,
+				271890A52C4534F2004BBC89 /* ListingScreen in Frameworks */,
+				27AE39012C455C8400024EEB /* ListingScreen in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,67 +95,10 @@
 			children = (
 				276F69962C43B6A500BF6943 /* AppDelegate.swift */,
 				276F69982C43B6A500BF6943 /* SceneDelegate.swift */,
-				2782F54A2C45119A0090AA75 /* Components */,
-				2782F53A2C45009B0090AA75 /* DataAccessLayer */,
-				276F69AA2C43BD4000BF6943 /* ModuleA */,
 				276F69CA2C43DCDA00BF6943 /* ModuleB */,
 				2782F5312C43FE700090AA75 /* Resources */,
 			);
 			path = universities;
-			sourceTree = "<group>";
-		};
-		276F69AA2C43BD4000BF6943 /* ModuleA */ = {
-			isa = PBXGroup;
-			children = (
-				276F69B72C43BDB700BF6943 /* Router */,
-				276F69B42C43BDA300BF6943 /* Entity */,
-				276F69B12C43BD8B00BF6943 /* Presenter */,
-				276F69AE2C43BD6E00BF6943 /* Interactor */,
-				276F69AB2C43BD5300BF6943 /* View */,
-			);
-			path = ModuleA;
-			sourceTree = "<group>";
-		};
-		276F69AB2C43BD5300BF6943 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				276F69AC2C43BD6400BF6943 /* ListingViewController.swift */,
-				276F69C72C43D62D00BF6943 /* Cells */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		276F69AE2C43BD6E00BF6943 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				276F69AF2C43BD7D00BF6943 /* ListingInteractor.swift */,
-				27FA4F812C4527B40067A7B6 /* UniversityRepository.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		276F69B12C43BD8B00BF6943 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				276F69B22C43BD9A00BF6943 /* ListingPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		276F69B42C43BDA300BF6943 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				276F69B52C43BDB100BF6943 /* University.swift */,
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
-		276F69B72C43BDB700BF6943 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				276F69B82C43BDC200BF6943 /* ListingRouter.swift */,
-			);
-			path = Router;
 			sourceTree = "<group>";
 		};
 		276F69BC2C43D17D00BF6943 /* Frameworks */ = {
@@ -177,14 +106,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		276F69C72C43D62D00BF6943 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				276F69C82C43D63800BF6943 /* UniversityCell.swift */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		276F69CA2C43DCDA00BF6943 /* ModuleB */ = {
@@ -231,36 +152,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		2782F5342C45009B0090AA75 /* Endpoints */ = {
-			isa = PBXGroup;
-			children = (
-				2782F5422C4501FC0090AA75 /* UniversityEndpoint.swift */,
-			);
-			path = Endpoints;
-			sourceTree = "<group>";
-		};
-		2782F53A2C45009B0090AA75 /* DataAccessLayer */ = {
-			isa = PBXGroup;
-			children = (
-				2782F5342C45009B0090AA75 /* Endpoints */,
-				2782F5352C45009B0090AA75 /* APIEndpoint.swift */,
-				2782F5372C45009B0090AA75 /* ConfigurationManager.swift */,
-				2782F5442C4502AD0090AA75 /* Network.swift */,
-				2782F5462C4502D60090AA75 /* APIError.swift */,
-			);
-			path = DataAccessLayer;
-			sourceTree = "<group>";
-		};
-		2782F54A2C45119A0090AA75 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				2782F54B2C4511BB0090AA75 /* PresenterState.swift */,
-				2782F54D2C45170C0090AA75 /* ProgressViewManager.swift */,
-				27FA4F7F2C45260D0067A7B6 /* UIConstants.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -279,7 +170,16 @@
 			);
 			name = universities;
 			packageProductDependencies = (
-				276F69C42C43D1DA00BF6943 /* RealmSwift */,
+				27FA4F842C4533340067A7B6 /* ListingScreen */,
+				27136E3C2C453427007C390E /* ListingScreen */,
+				271890A42C4534F2004BBC89 /* ListingScreen */,
+				27AE38F42C454D1600024EEB /* ListingScreen */,
+				27AE38F72C454E2700024EEB /* ListingScreen */,
+				27AE38FA2C45508F00024EEB /* ListingScreen */,
+				27AE38FD2C455C3300024EEB /* ListingScreen */,
+				27AE39002C455C8400024EEB /* ListingScreen */,
+				27AE39032C455CBD00024EEB /* ListingScreen */,
+				332C6ABD2C455DCD00BF052C /* ListingScreen */,
 			);
 			productName = universities;
 			productReference = 276F69932C43B6A500BF6943 /* universities.app */;
@@ -310,7 +210,7 @@
 			);
 			mainGroup = 276F698A2C43B6A500BF6943;
 			packageReferences = (
-				276F69BB2C43CEDE00BF6943 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				332C6ABC2C455DCD00BF052C /* XCLocalSwiftPackageReference "Packages/ListingScreen" */,
 			);
 			productRefGroup = 276F69942C43B6A500BF6943 /* Products */;
 			projectDirPath = "";
@@ -339,26 +239,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				276F69B92C43BDC200BF6943 /* ListingRouter.swift in Sources */,
 				276F69D62C43DD6000BF6943 /* DetailsRouter.swift in Sources */,
-				2782F54C2C4511BB0090AA75 /* PresenterState.swift in Sources */,
-				27FA4F822C4527B40067A7B6 /* UniversityRepository.swift in Sources */,
-				2782F5452C4502AD0090AA75 /* Network.swift in Sources */,
-				2782F54E2C45170C0090AA75 /* ProgressViewManager.swift in Sources */,
-				2782F5472C4502D60090AA75 /* APIError.swift in Sources */,
-				2782F5432C4501FC0090AA75 /* UniversityEndpoint.swift in Sources */,
-				27FA4F802C45260D0067A7B6 /* UIConstants.swift in Sources */,
 				276F69972C43B6A500BF6943 /* AppDelegate.swift in Sources */,
-				2782F53D2C45009B0090AA75 /* APIEndpoint.swift in Sources */,
 				276F69CD2C43DD1900BF6943 /* DetailsViewController.swift in Sources */,
-				276F69C92C43D63800BF6943 /* UniversityCell.swift in Sources */,
 				276F69992C43B6A500BF6943 /* SceneDelegate.swift in Sources */,
 				276F69D32C43DD4800BF6943 /* DetailsPresenter.swift in Sources */,
-				2782F53F2C45009B0090AA75 /* ConfigurationManager.swift in Sources */,
-				276F69B02C43BD7D00BF6943 /* ListingInteractor.swift in Sources */,
-				276F69AD2C43BD6400BF6943 /* ListingViewController.swift in Sources */,
-				276F69B32C43BD9A00BF6943 /* ListingPresenter.swift in Sources */,
-				276F69B62C43BDB100BF6943 /* University.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +313,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -485,7 +370,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -510,7 +395,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -543,7 +428,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -584,22 +469,53 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		276F69BB2C43CEDE00BF6943 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		332C6ABC2C455DCD00BF052C /* XCLocalSwiftPackageReference "Packages/ListingScreen" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/ListingScreen;
 		};
-/* End XCRemoteSwiftPackageReference section */
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		276F69C42C43D1DA00BF6943 /* RealmSwift */ = {
+		27136E3C2C453427007C390E /* ListingScreen */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 276F69BB2C43CEDE00BF6943 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
+			productName = ListingScreen;
+		};
+		271890A42C4534F2004BBC89 /* ListingScreen */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ListingScreen;
+		};
+		27AE38F42C454D1600024EEB /* ListingScreen */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ListingScreen;
+		};
+		27AE38F72C454E2700024EEB /* ListingScreen */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ListingScreen;
+		};
+		27AE38FA2C45508F00024EEB /* ListingScreen */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ListingScreen;
+		};
+		27AE38FD2C455C3300024EEB /* ListingScreen */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ListingScreen;
+		};
+		27AE39002C455C8400024EEB /* ListingScreen */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ListingScreen;
+		};
+		27AE39032C455CBD00024EEB /* ListingScreen */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ListingScreen;
+		};
+		27FA4F842C4533340067A7B6 /* ListingScreen */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ListingScreen;
+		};
+		332C6ABD2C455DCD00BF052C /* ListingScreen */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ListingScreen;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

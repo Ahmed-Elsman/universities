@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import DAL
+import Common
 
 protocol DetailsView: AnyObject {
     func showUniversityDetails(_ university: University)
@@ -13,14 +15,12 @@ protocol DetailsView: AnyObject {
 
 class DetailsPresenter {
     private let router: DetailsRouter
-    private let listingPresenter: ListingPresenter
     weak var view: DetailsView?
 
     private let university: University
 
-    init(router: DetailsRouter, listingPresenter: ListingPresenter, university: University) {
+    init(router: DetailsRouter, university: University) {
         self.router = router
-        self.listingPresenter = listingPresenter
         self.university = university
     }
 
@@ -29,7 +29,6 @@ class DetailsPresenter {
     }
 
     func refreshListingData() {
-        listingPresenter.refreshData()
         router.navigateBack()
     }
 }

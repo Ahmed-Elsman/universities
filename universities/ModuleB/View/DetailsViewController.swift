@@ -7,6 +7,7 @@
 
 import UIKit
 import WebKit
+import Common
 
 class DetailsViewController: UIViewController, DetailsView {
 
