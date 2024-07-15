@@ -13,10 +13,8 @@
 		276F69992C43B6A500BF6943 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F69982C43B6A500BF6943 /* SceneDelegate.swift */; };
 		276F69A02C43B6A900BF6943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276F699F2C43B6A900BF6943 /* Assets.xcassets */; };
 		276F69A32C43B6A900BF6943 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 276F69A22C43B6A900BF6943 /* Base */; };
-		276F69CD2C43DD1900BF6943 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F69CC2C43DD1900BF6943 /* DetailsViewController.swift */; };
-		276F69D32C43DD4800BF6943 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F69D22C43DD4800BF6943 /* DetailsPresenter.swift */; };
-		276F69D62C43DD6000BF6943 /* DetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276F69D52C43DD6000BF6943 /* DetailsRouter.swift */; };
 		2782F5302C43FB3B0090AA75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276F69A12C43B6A900BF6943 /* LaunchScreen.storyboard */; };
+		279402D12C459A18009F4114 /* DetailsScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 279402D02C459A18009F4114 /* DetailsScreen */; };
 		27AE38F52C454D1600024EEB /* ListingScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 27AE38F42C454D1600024EEB /* ListingScreen */; };
 		27AE38F82C454E2700024EEB /* ListingScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 27AE38F72C454E2700024EEB /* ListingScreen */; };
 		27AE38FB2C45508F00024EEB /* ListingScreen in Frameworks */ = {isa = PBXBuildFile; productRef = 27AE38FA2C45508F00024EEB /* ListingScreen */; };
@@ -47,9 +45,6 @@
 		276F699F2C43B6A900BF6943 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		276F69A22C43B6A900BF6943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		276F69A42C43B6A900BF6943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		276F69CC2C43DD1900BF6943 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
-		276F69D22C43DD4800BF6943 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
-		276F69D52C43DD6000BF6943 /* DetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +61,7 @@
 				27FA4F852C4533340067A7B6 /* ListingScreen in Frameworks */,
 				332C6ABE2C455DCD00BF052C /* ListingScreen in Frameworks */,
 				271890A52C4534F2004BBC89 /* ListingScreen in Frameworks */,
+				279402D12C459A18009F4114 /* DetailsScreen in Frameworks */,
 				27AE39012C455C8400024EEB /* ListingScreen in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,7 +91,6 @@
 			children = (
 				276F69962C43B6A500BF6943 /* AppDelegate.swift */,
 				276F69982C43B6A500BF6943 /* SceneDelegate.swift */,
-				276F69CA2C43DCDA00BF6943 /* ModuleB */,
 				2782F5312C43FE700090AA75 /* Resources */,
 			);
 			path = universities;
@@ -106,40 +101,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		276F69CA2C43DCDA00BF6943 /* ModuleB */ = {
-			isa = PBXGroup;
-			children = (
-				276F69D42C43DD5400BF6943 /* Router */,
-				276F69D12C43DD3D00BF6943 /* Presenter */,
-				276F69CB2C43DD0D00BF6943 /* View */,
-			);
-			path = ModuleB;
-			sourceTree = "<group>";
-		};
-		276F69CB2C43DD0D00BF6943 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				276F69CC2C43DD1900BF6943 /* DetailsViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		276F69D12C43DD3D00BF6943 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				276F69D22C43DD4800BF6943 /* DetailsPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		276F69D42C43DD5400BF6943 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				276F69D52C43DD6000BF6943 /* DetailsRouter.swift */,
-			);
-			path = Router;
 			sourceTree = "<group>";
 		};
 		2782F5312C43FE700090AA75 /* Resources */ = {
@@ -180,6 +141,7 @@
 				27AE39002C455C8400024EEB /* ListingScreen */,
 				27AE39032C455CBD00024EEB /* ListingScreen */,
 				332C6ABD2C455DCD00BF052C /* ListingScreen */,
+				279402D02C459A18009F4114 /* DetailsScreen */,
 			);
 			productName = universities;
 			productReference = 276F69932C43B6A500BF6943 /* universities.app */;
@@ -211,6 +173,7 @@
 			mainGroup = 276F698A2C43B6A500BF6943;
 			packageReferences = (
 				332C6ABC2C455DCD00BF052C /* XCLocalSwiftPackageReference "Packages/ListingScreen" */,
+				279402CF2C459A18009F4114 /* XCLocalSwiftPackageReference "Packages/DetailsScreen" */,
 			);
 			productRefGroup = 276F69942C43B6A500BF6943 /* Products */;
 			projectDirPath = "";
@@ -239,11 +202,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				276F69D62C43DD6000BF6943 /* DetailsRouter.swift in Sources */,
 				276F69972C43B6A500BF6943 /* AppDelegate.swift in Sources */,
-				276F69CD2C43DD1900BF6943 /* DetailsViewController.swift in Sources */,
 				276F69992C43B6A500BF6943 /* SceneDelegate.swift in Sources */,
-				276F69D32C43DD4800BF6943 /* DetailsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +430,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
+		279402CF2C459A18009F4114 /* XCLocalSwiftPackageReference "Packages/DetailsScreen" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/DetailsScreen;
+		};
 		332C6ABC2C455DCD00BF052C /* XCLocalSwiftPackageReference "Packages/ListingScreen" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Packages/ListingScreen;
@@ -484,6 +448,10 @@
 		271890A42C4534F2004BBC89 /* ListingScreen */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ListingScreen;
+		};
+		279402D02C459A18009F4114 /* DetailsScreen */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DetailsScreen;
 		};
 		27AE38F42C454D1600024EEB /* ListingScreen */ = {
 			isa = XCSwiftPackageProductDependency;

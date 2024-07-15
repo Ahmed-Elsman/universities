@@ -8,6 +8,7 @@
 import UIKit
 import ListingScreen
 import Common
+import DetailsScreen
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
