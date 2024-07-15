@@ -1,5 +1,36 @@
 # Universities App
 
+## Overview
+
+This project is a modular mobile application developed in Swift and UIKit, following the VIPER architecture. The application consists of two main modules:
+
+- **Module A**: Listing Screen - Displays a list of universities fetched from an API.
+- **Module B**: Details Screen - Shows detailed information about a selected university.
+
+The app fetches data from an API, caches it in a local database using Realm, and displays it in a user-friendly interface. If the API call fails, the app fetches data from the local database. 
+
+The VIPER architecture promotes code organization and separation of concerns, ensuring a clean and maintainable codebase.
+
+## Features
+
+- **Modular Architecture**: The app is divided into distinct modules for the listing and details screens.
+- **VIPER Architecture**: Utilizes VIPER architecture for better separation of concerns and maintainability.
+- **Networking**: Fetches data from a remote API.
+- **Local Data Caching**: Caches fetched data using Realm for offline access.
+- **Error Handling**: Displays appropriate error messages when network requests fail.
+- **Domain-Driven Design (DDD)**: Incorporates DDD principles to structure the application's core logic and infrastructure effectively.
+
+### Architecture
+ ## VIPER Architecture
+
+The VIPER architecture is used to organize the app's structure. VIPER stands for:
+
+- **View**: The View is responsible for displaying data to the user and handling user interactions.
+- **Interactor**: The Interactor contains the business logic of the app. It fetches data from the network or local database.
+- **Presenter**: The Presenter acts as a mediator between the View and the Interactor. It receives user input from the View and requests data from the Interactor.
+- **Entity**: The Entity represents the data models used in the app.
+- **Router**: The Router handles navigation and routing between screens.
+
 ## Package Declarations
 
 ### ListingScreen (Module A)
