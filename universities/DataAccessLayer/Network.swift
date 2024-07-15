@@ -29,7 +29,7 @@ struct NetworkManager: NetworkManaging {
     
     init(withSession session: URLSessionProtocol? = nil, decoder: JSONDecoder = JSONDecoder()) {
         let config = URLSessionConfiguration.default
-        config.waitsForConnectivity = true
+        config.waitsForConnectivity = false
         self.session = session ?? URLSession(configuration: config)
         self.decoder = decoder
     }
