@@ -34,7 +34,9 @@ class ListingViewController: UIViewController, ListingView {
     }
 
     func showError(_ error: String) {
-        // Handle error display
+        let alertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alertController, animated: true, completion: nil)
     }
 }
 

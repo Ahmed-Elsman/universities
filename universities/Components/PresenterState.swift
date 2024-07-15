@@ -12,9 +12,3 @@ enum PresenterState<T> {
     case loaded(data: T)
     case error(error: APIError)
 }
-
-protocol PresenterStatusProtocol: AnyObject {
-    associatedtype Data
-    
-    var state: PresenterState<Data> { get set }
-}
