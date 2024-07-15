@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import RealmSwift
 
 protocol ListingInteractorInput {
     func fetchUniversities()
@@ -19,47 +18,28 @@ protocol ListingInteractorOutput: AnyObject {
 
 class ListingInteractor: ListingInteractorInput {
     weak var output: ListingInteractorOutput?
-    private let networkManager: NetworkManaging
-    private let universityEndpoint = UniversityEndpoint()
+    private let repository: UniversityRepository
     
-    init(networkManager: NetworkManaging) {
-        self.networkManager = networkManager
+    init(repository: UniversityRepository) {
+        self.repository = repository
     }
     
+    @MainActor
     func fetchUniversities() {
-        networkManager.fetchData(from: universityEndpoint) { [weak self] (result: Result<[University], Error>) in
+        repository.fetchFromNetwork { [weak self] result in
             switch result {
             case .success(let universities):
-                if self?.universityEndpoint.shouldSaveToDatabase == true {
-                    self?.saveToLocalDB(universities)
-                }
-                DispatchQueue.main.async {
-                    self?.output?.didFetchUniversities(universities)
-                }
+                self?.repository.saveToDB(universities)
+                self?.output?.didFetchUniversities(universities)
             case .failure(let error):
-                self?.fetchFromLocalDB(with: error)
-            }
-        }
-    }
-    
-    private func saveToLocalDB(_ universities: [University]) {
-        DispatchQueue.main.async {
-            let realm = try! Realm()
-            try! realm.write {
-                realm.delete(realm.objects(University.self))
-                realm.add(universities)
-            }
-        }
-    }
-    
-    private func fetchFromLocalDB(with error: Error) {
-        DispatchQueue.main.async {
-            let realm = try! Realm()
-            let universities = realm.objects(University.self).map { $0 }
-            if universities.isEmpty {
-                self.output?.didFailToFetchUniversities(with: error)
-            } else {
-                self.output?.didFetchUniversities(Array(universities))
+                self?.repository.fetchFromLocalDB { localResult in
+                    switch localResult {
+                    case .success(let universities):
+                        self?.output?.didFetchUniversities(universities)
+                    case .failure(let localError):
+                        self?.output?.didFailToFetchUniversities(with: localError)
+                    }
+                }
             }
         }
     }

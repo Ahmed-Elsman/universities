@@ -17,8 +17,8 @@ class ListingRouter {
 
     static func createModule() -> UIViewController {
         let view = ListingViewController()
-        let networkManager = NetworkManager()
-        let interactor = ListingInteractor(networkManager: networkManager)
+        let repository = UniversityRepositoryImpl(networkManager: NetworkManager())
+        let interactor = ListingInteractor(repository: repository)
         let router = ListingRouter()
         let presenter = ListingPresenter(interactor: interactor, router: router)
 
@@ -30,4 +30,3 @@ class ListingRouter {
         return view
     }
 }
-
