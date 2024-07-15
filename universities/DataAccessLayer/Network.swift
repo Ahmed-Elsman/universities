@@ -1,26 +1,25 @@
 //
 //  Network.swift
-//  challenge05
+//  universities
 //
-//  Created by Ahmed Elsman on 02/07/2024.
+//  Created by Ahmed Elsman on 15/07/2024.
 //
 
 import Foundation
 
-// MARK: - URLSession
-
 protocol URLSessionProtocol {
-    func data(from request: URLRequest) async throws -> (Data, URLResponse)
+    func data(from request: URLRequest, completion: @escaping (Data?, URLResponse?, Error?) -> Void)
 }
 
 extension URLSession: URLSessionProtocol {
-    func data(from request: URLRequest) async throws -> (Data, URLResponse) {
-        try await data(for: request)
+    func data(from request: URLRequest, completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
+        let task = dataTask(with: request, completionHandler: completion)
+        task.resume()
     }
 }
 
 protocol NetworkManaging {
-    func fetchData<T: Decodable>(from endpoint: APIEndpoint) async throws -> T
+    func fetchData<T: Decodable>(from endpoint: APIEndpoint, completion: @escaping (Result<T, Error>) -> Void)
 }
 
 struct NetworkManager: NetworkManaging {
@@ -35,20 +34,26 @@ struct NetworkManager: NetworkManaging {
         self.decoder = decoder
     }
     
-    func fetchData<T: Decodable>(from endpoint: APIEndpoint) async throws -> T {
+    func fetchData<T: Decodable>(from endpoint: APIEndpoint, completion: @escaping (Result<T, Error>) -> Void) {
         let request = endpoint.request
         
-        let (data, response) = try await session.data(from: request)
-        
-        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-            throw APIError.invalidResponse
-        }
-        
-        do {
-            let decodedData = try JSONDecoder().decode(T.self, from: data)
-            return decodedData
-        } catch {
-            throw APIError.decodingError
+        session.data(from: request) { data, response, error in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            
+            guard let data = data, let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                completion(.failure(APIError.invalidResponse))
+                return
+            }
+            
+            do {
+                let decodedData = try self.decoder.decode(T.self, from: data)
+                completion(.success(decodedData))
+            } catch {
+                completion(.failure(APIError.decodingError))
+            }
         }
     }
 }

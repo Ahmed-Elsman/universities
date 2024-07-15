@@ -27,6 +27,8 @@
 		2782F53D2C45009B0090AA75 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782F5352C45009B0090AA75 /* APIEndpoint.swift */; };
 		2782F53F2C45009B0090AA75 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782F5372C45009B0090AA75 /* ConfigurationManager.swift */; };
 		2782F5432C4501FC0090AA75 /* UniversityEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782F5422C4501FC0090AA75 /* UniversityEndpoint.swift */; };
+		2782F5452C4502AD0090AA75 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782F5442C4502AD0090AA75 /* Network.swift */; };
+		2782F5472C4502D60090AA75 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782F5462C4502D60090AA75 /* APIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,6 +65,8 @@
 		2782F5352C45009B0090AA75 /* APIEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		2782F5372C45009B0090AA75 /* ConfigurationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
 		2782F5422C4501FC0090AA75 /* UniversityEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversityEndpoint.swift; sourceTree = "<group>"; };
+		2782F5442C4502AD0090AA75 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		2782F5462C4502D60090AA75 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +246,8 @@
 				2782F5342C45009B0090AA75 /* Endpoints */,
 				2782F5352C45009B0090AA75 /* APIEndpoint.swift */,
 				2782F5372C45009B0090AA75 /* ConfigurationManager.swift */,
+				2782F5442C4502AD0090AA75 /* Network.swift */,
+				2782F5462C4502D60090AA75 /* APIError.swift */,
 			);
 			path = DataAccessLayer;
 			sourceTree = "<group>";
@@ -326,6 +332,8 @@
 			files = (
 				276F69B92C43BDC200BF6943 /* ListingRouter.swift in Sources */,
 				276F69D62C43DD6000BF6943 /* DetailsRouter.swift in Sources */,
+				2782F5452C4502AD0090AA75 /* Network.swift in Sources */,
+				2782F5472C4502D60090AA75 /* APIError.swift in Sources */,
 				2782F5432C4501FC0090AA75 /* UniversityEndpoint.swift in Sources */,
 				276F69972C43B6A500BF6943 /* AppDelegate.swift in Sources */,
 				2782F53D2C45009B0090AA75 /* APIEndpoint.swift in Sources */,
