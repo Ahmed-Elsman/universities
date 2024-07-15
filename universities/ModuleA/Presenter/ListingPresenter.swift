@@ -49,15 +49,12 @@ class ListingPresenter {
     private func handleStateChange() {
         switch state {
         case .loading:
-            // showProgressView()
-            print("Loading ....")
+            ProgressViewManager.shared.showProgressView()
         case .loaded(let universities):
-            // .hideProgressView()
-            print("Loaded")
+            ProgressViewManager.shared.hideProgressView()
             view?.showUniversities(universities)
         case .error(let error):
-            // hideProgressView()
-            print("Error")
+            ProgressViewManager.shared.hideProgressView()
             view?.showError(error.localizedDescription)
         }
     }

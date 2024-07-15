@@ -30,6 +30,7 @@
 		2782F5452C4502AD0090AA75 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782F5442C4502AD0090AA75 /* Network.swift */; };
 		2782F5472C4502D60090AA75 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782F5462C4502D60090AA75 /* APIError.swift */; };
 		2782F54C2C4511BB0090AA75 /* PresenterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782F54B2C4511BB0090AA75 /* PresenterState.swift */; };
+		2782F54E2C45170C0090AA75 /* ProgressViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782F54D2C45170C0090AA75 /* ProgressViewManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -69,6 +70,7 @@
 		2782F5442C4502AD0090AA75 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		2782F5462C4502D60090AA75 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		2782F54B2C4511BB0090AA75 /* PresenterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterState.swift; sourceTree = "<group>"; };
+		2782F54D2C45170C0090AA75 /* ProgressViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				2782F54B2C4511BB0090AA75 /* PresenterState.swift */,
+				2782F54D2C45170C0090AA75 /* ProgressViewManager.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				276F69D62C43DD6000BF6943 /* DetailsRouter.swift in Sources */,
 				2782F54C2C4511BB0090AA75 /* PresenterState.swift in Sources */,
 				2782F5452C4502AD0090AA75 /* Network.swift in Sources */,
+				2782F54E2C45170C0090AA75 /* ProgressViewManager.swift in Sources */,
 				2782F5472C4502D60090AA75 /* APIError.swift in Sources */,
 				2782F5432C4501FC0090AA75 /* UniversityEndpoint.swift in Sources */,
 				276F69972C43B6A500BF6943 /* AppDelegate.swift in Sources */,
