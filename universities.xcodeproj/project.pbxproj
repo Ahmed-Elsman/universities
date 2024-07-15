@@ -26,6 +26,7 @@
 		2782F5302C43FB3B0090AA75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 276F69A12C43B6A900BF6943 /* LaunchScreen.storyboard */; };
 		2782F53D2C45009B0090AA75 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782F5352C45009B0090AA75 /* APIEndpoint.swift */; };
 		2782F53F2C45009B0090AA75 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782F5372C45009B0090AA75 /* ConfigurationManager.swift */; };
+		2782F5432C4501FC0090AA75 /* UniversityEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2782F5422C4501FC0090AA75 /* UniversityEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,6 +62,7 @@
 		276F69D52C43DD6000BF6943 /* DetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouter.swift; sourceTree = "<group>"; };
 		2782F5352C45009B0090AA75 /* APIEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		2782F5372C45009B0090AA75 /* ConfigurationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
+		2782F5422C4501FC0090AA75 /* UniversityEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversityEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +231,7 @@
 		2782F5342C45009B0090AA75 /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
+				2782F5422C4501FC0090AA75 /* UniversityEndpoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 			files = (
 				276F69B92C43BDC200BF6943 /* ListingRouter.swift in Sources */,
 				276F69D62C43DD6000BF6943 /* DetailsRouter.swift in Sources */,
+				2782F5432C4501FC0090AA75 /* UniversityEndpoint.swift in Sources */,
 				276F69972C43B6A500BF6943 /* AppDelegate.swift in Sources */,
 				2782F53D2C45009B0090AA75 /* APIEndpoint.swift in Sources */,
 				276F69CD2C43DD1900BF6943 /* DetailsViewController.swift in Sources */,
